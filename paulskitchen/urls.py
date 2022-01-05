@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from django.urls import re_path
+from django.views.static import serve
+from restaurant import views as restaurant_views
+from .settings import STATIC_ROOT
 
 urlpatterns = [
+    path('', restaurant_views.index),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('accounts/profile/', restaurant_views.profile),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': STATIC_ROOT}), 
 ]
