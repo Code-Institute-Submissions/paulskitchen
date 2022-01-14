@@ -4,6 +4,9 @@ from .models import Booking, UserProfile
 # Register your models here.
 admin.site.site_header = 'Pauls Kitchen Dashboard'
 
+class BookingAdmin(admin.ModelAdmin):
+    profile = '/workspace/paulskitchen/templates/restaurant/profile.html'
+
 admin.site.register(Booking)
 admin.site.register(UserProfile)
 

@@ -27,4 +27,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('accounts/profile/', restaurant_views.profile),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': STATIC_ROOT}), 
+    path('', restaurant_views.contact),
+    path('restaurant/menu', restaurant_views.menu),
 ]

@@ -28,3 +28,10 @@ def profile(request):
 
       #For all other request types, return not accepted HTML code  
     return HttpResponse(f"<h1>{request.method} is not accepted</h1>")
+
+def contact(request):
+    if request.method == "GET":
+        return render(request, 'restaurant/contact.html', {})
+
+def menu(request):
+    return render(request, 'restaurant/menu.html', {})
