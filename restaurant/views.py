@@ -40,3 +40,6 @@ def create_booking(request):
 
 def about(request):
     return render(request, 'restaurant/about.html', {})
+
+def index(request):
+    return render(request, 'restaurant/index.html', {})

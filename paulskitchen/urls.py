@@ -31,4 +31,5 @@ urlpatterns = [
     path('menu.html', restaurant_views.menu, name="menu"),
     path('create_booking.html', restaurant_views.create_booking, name="create_booking"),
     path('about.html', restaurant_views.about, name="about"),
+    path('index.html', restaurant_views.index, name="index"),
 ]
