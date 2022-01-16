@@ -13,3 +13,10 @@ class UserProfile(models.Model):
     firstname = models.CharField(max_length=100, null=True)
     lastname = models.CharField(max_length=100, null=True)
     email = models.CharField(max_length=100, null=True)
+
+"""model for form"""
+class Contact(models.Model):
+    name = models.CharField(max_length= 100)
+    email = models.EmailField(max_length= 250)
+    message = models.CharField(max_length=500)
+

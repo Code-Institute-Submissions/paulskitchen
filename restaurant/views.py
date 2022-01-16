@@ -1,5 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import UserProfile, Booking
+from .models import UserProfile, Booking, Contact
+from .forms import  ContactForm
+
+
 
 # Create your views here.
 def index(request):
@@ -29,12 +32,17 @@ def profile(request):
       #For all other request types, return not accepted HTML code  
     return HttpResponse(f"<h1>{request.method} is not accepted</h1>")
 
+#Views for pages
+
+"""Function to render contact hmtl page"""
 def contact(request):
         return render(request, 'restaurant/contact.html', {})
 
+"""Function to render menu hmtl page"""
 def menu(request):
     return render(request, 'restaurant/menu.html', {})
 
+"""Function to render create booking page"""
 def create_booking(request):
     return render(request, 'restaurant/create_booking.html', {})
 
@@ -43,3 +51,15 @@ def about(request):
 
 def index(request):
     return render(request, 'restaurant/index.html', {})
+
+#function for contact form view
+
+def contact_create_view(request):
+    form = ContactForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    context = {
+        'form' : form
+    }
+    return render(request, "/workspace/paulskitchen/templates/restaurant/contact_create.html", context)
