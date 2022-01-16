@@ -2,29 +2,41 @@
 
 {% block content %}
 
-  <div class="container-fluid">
-    <h2>Menu</h2>
-  </div>
-
-  <div class="container-fluid">
-    <h4>Starters</h4>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-
-  <div class="container-fluid">
-    <h4>Mains</h4>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-  
-  <div class="container-fluid">
-    <h4>Desserts</h4>
-    <p></p>
-    <p></p>
-    <p></p>
-  </div>
-
+<div class="container-fluid d-flex justify-content-center">
+  <h2>Menu</h2>
+</div>
+<!-- Starters -->
+<div class="row">
+    <div class="col-7">
+      <h2>Starter</h2>
+      <div class="row">
+        <p>Something</p>
+      </div>
+      <div class="row">
+        <p>Something else</p>
+      </div>
+    </div>
+<!-- Main -->
+  <div class="row">
+    <div class="col-5">
+      <h2>Main</h2>
+      <div class="row">
+        <p>Something</p>
+      </div>
+      <div class="row">
+        <p>Something else</p>
+      </div>
+    </div>
+  <!-- Desserts -->
+  <div class="row">
+    <div class="col-5">
+      <h2>Desserts</h2>
+      <div class="row">
+        <p>Something sweet</p>
+      </div>
+      <div class="row">
+        <p>Something else sweet</p>
+      </div>
+    </div>
+</div>
 {% endblock %}
