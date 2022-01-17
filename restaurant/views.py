@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import UserProfile, Booking, Contact
-from .forms import  ContactForm
+from .forms import  ContactForm, BookingForm
 
 
 
@@ -63,3 +63,15 @@ def contact_create_view(request):
         'form' : form
     }
     return render(request, "/workspace/paulskitchen/templates/restaurant/contact_create.html", context)
+
+#function for booking form view
+
+def booking_form(request):
+    form = BookingForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    context = {
+        'form' : form
+    }
+    return render(request, "/workspace/paulskitchen/templates/restaurant/create_booking.html", context)
