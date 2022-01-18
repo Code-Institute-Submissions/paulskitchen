@@ -44,7 +44,24 @@ def menu(request):
 
 """Function to render create booking page"""
 def create_booking(request):
-    return render(request, 'restaurant/create_booking.html', {})
+    print(request.user.username)
+    print(request.POST)
+    form = BookingForm(request.POST or None)
+        
+
+    if request.method == 'POST': 
+        if form.is_valid():
+            form.save()
+        context = {
+            'form' : form
+        }
+        return render(request, "restaurant/manage_bookings.html", context)
+    context = {
+        'user': request.user,
+        'form' : form
+    }
+    return render(request, 'restaurant/create_booking.html', context)
+    
 
 def about(request):
     return render(request, 'restaurant/about.html', {})
@@ -66,12 +83,20 @@ def contact_create_view(request):
 
 #function for booking form view
 
-def booking_form(request):
-    form = BookingForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-
-    context = {
-        'form' : form
+def delete_booking_view(request, id):
+    obj = get_object_or_404(Booking, id=id)
+    if request.method == "POST":
+        obj.delete()
+    content = {
+    "object": obj
     }
-    return render(request, "/workspace/paulskitchen/templates/restaurant/create_booking.html", context)
+    return render(request, "/workspace/paulskitchen/templates/restaurant/delete_booking.html", context)
+
+def manage_bookings(request):
+    bookings = Booking.objects.filter(
+        user=request.user
+    )
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'restaurant/manage_bookings.html', context)

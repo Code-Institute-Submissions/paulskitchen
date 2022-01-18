@@ -2,6 +2,12 @@ from django import forms
 
 from .models import Contact, Booking
 
+class DateInput(forms.DateInput):
+    input_type = 'date' 
+
+class TimeInput(forms.TimeInput):
+    input_type = 'time' 
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -20,3 +26,7 @@ class BookingForm(forms.ModelForm):
             'time',
             'guests',
         ]
+        widgets = {
+            'date': DateInput(),
+            'time': TimeInput()
+        }
