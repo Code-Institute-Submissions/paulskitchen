@@ -95,4 +95,8 @@ def manage_bookings(request):
 def delete_booking(request, booking_id):
     bookings = Booking.objects.get(pk=booking_id)
     bookings.delete()
-    return render(request, 'restaurant/delete_booking.html')
+    return render(request, 'restaurant/manage_bookings.html')
+
+#delete booking confirmation
+def deletion_confirmation(request):
+    return render(request, 'restaurant/deletion_confirmation.html')
