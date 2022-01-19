@@ -34,16 +34,13 @@
 
 
 
-<h1>Manage Your Bookings</h1>
-{% for booking in bookings %}
-<p>{{ booking.id }}</p>
-<p>{{ booking.date }}</p>
+<h1>Change Your Booking</h1>
+<!-- {% for booking in bookings %} -->
+<!-- <p>{{ booking.id }}</p> -->
+<!-- <p>{{ booking.date }}</p> -->
 
-<a href="{% url 'delete_booking' booking.id %}">Cancel</a>
-<a href="{% url 'edit_booking' booking.id %}">Edit</a>
-{% endfor %}
-
-
-
+<!-- <a href="{% url 'delete_booking' booking.id %}">Cancel</a> -->
+<!-- {% endfor %} -->
+{{ Booking }}
 
 {% endblock %}

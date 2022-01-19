@@ -34,5 +34,5 @@ urlpatterns = [
     path('contact_create/', restaurant_views.contact_create_view, name="contact_create"),
     path('manage_bookings/', restaurant_views.manage_bookings, name="manage_bookings"),
     path('delete_booking/<int:booking_id>', restaurant_views.delete_booking, name="delete_booking"),
-    path('deletion_confirmation/', restaurant_views.deletion_confirmation, name="deletion_confirmation"),
+    path('edit_booking/<int:booking_id>', restaurant_views.edit_booking, name="edit_booking"),
 ]

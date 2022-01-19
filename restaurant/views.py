@@ -97,6 +97,14 @@ def delete_booking(request, booking_id):
     bookings.delete()
     return render(request, 'restaurant/manage_bookings.html')
 
-#delete booking confirmation
-def deletion_confirmation(request):
-    return render(request, 'restaurant/deletion_confirmation.html')
+#update booking function
+def edit_booking(request, booking_id):
+	booking = Booking.objects.get(pk=booking_id)
+	form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
+	if form.is_valid():
+		form.save()
+		return redirect('restaurant/manage_bookings.html')
+
+	return render(request, 'restaurant/create_booking.html', 
+		{'booking':booking,
+		'form':form})
