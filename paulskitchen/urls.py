@@ -32,6 +32,6 @@ urlpatterns = [
     path('create_booking/', restaurant_views.create_booking, name="booking_form"),
     path('about/', restaurant_views.about, name="about"),
     path('contact_create/', restaurant_views.contact_create_view, name="contact_create"),
-    path('delete_booking/', restaurant_views.delete_booking_view, name="delete_booking"),
     path('manage_bookings/', restaurant_views.manage_bookings, name="manage_bookings"),
+    path('delete_booking/', restaurant_views.delete_booking, name="delete_booking"),
 ]

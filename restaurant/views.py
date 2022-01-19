@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import UserProfile, Booking, Contact
 from .forms import  ContactForm, BookingForm
 
@@ -81,17 +81,7 @@ def contact_create_view(request):
     }
     return render(request, "/workspace/paulskitchen/templates/restaurant/contact_create.html", context)
 
-#function for booking form view
-
-def delete_booking_view(request, id):
-    obj = get_object_or_404(Booking, id=id)
-    if request.method == "POST":
-        obj.delete()
-    content = {
-    "object": obj
-    }
-    return render(request, "/workspace/paulskitchen/templates/restaurant/delete_booking.html", context)
-
+#function for manage booking
 def manage_bookings(request):
     bookings = Booking.objects.filter(
         user=request.user
@@ -100,3 +90,7 @@ def manage_bookings(request):
         'bookings': bookings
     }
     return render(request, 'restaurant/manage_bookings.html', context)
+
+#delete booking function
+def delete_booking(request):
+    return render(request, 'restaurant/delete_booking.html')

@@ -1,12 +1,5 @@
 {% extends "restaurant/base.html" %}
-{% load static %}
 
 {% block content %}
-
-<h1>Cancel Bookings</h1>
-<form action='.' method="POST"> {% csrf_token %}
-    <p>Confirm booking deletion?</p>
-    <p><input type='submit' value='Yes' /> <a href='../'>Cancel</a></p>
-</form>
 
 {% endblock %}
