@@ -103,7 +103,7 @@ def edit_booking(request, booking_id):
 	form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
 	if form.is_valid():
 		form.save()
-		return redirect('restaurant/manage_bookings.html')
+		return render(request, 'restaurant/manage_bookings.html')
 
 	return render(request, 'restaurant/create_booking.html', 
 		{'booking':booking,
