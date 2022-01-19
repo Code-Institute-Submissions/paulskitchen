@@ -31,9 +31,13 @@
       </div>
     </div>
   </nav>
-
-<form method="POST"> {% csrf_token %}
-        <input type="submit" value='Delete Booking'/>
+<div>
+  <h2>Are you sure you want to delete your booking?</h2>
+</div>
+<!-- <form action="{% url 'delete_booking' booking.id %}"> method="POST"> {% csrf_token %} -->
+        <!-- <input type="submit" value='Delete Booking'/> -->
 </form>
+
+<a href="{% url 'delete_booking' booking.id %}"></a>
 
 {% endblock %}

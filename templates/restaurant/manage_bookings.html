@@ -39,7 +39,7 @@
 <p>{{ booking.id }}</p>
 <p>{{ booking.date }}</p>
 
-<button><a href="/delete_booking/">Cancel</a></button>
+<a href="{% url 'delete_booking' booking.id %}">Cancel</a>
 {% endfor %}
 
 
