@@ -103,8 +103,12 @@ def edit_booking(request, booking_id):
 	form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
 	if form.is_valid():
 		form.save()
-		return render(request, 'restaurant/manage_bookings.html')
+		return render(request, 'restaurant/booking_changed.html/')
 
 	return render(request, 'restaurant/create_booking.html', 
 		{'booking':booking,
 		'form':form})
+
+#change of booking confirmation details
+def booking_changed(request):
+    return render(request, 'restaurant/bookings_changed.html', {})

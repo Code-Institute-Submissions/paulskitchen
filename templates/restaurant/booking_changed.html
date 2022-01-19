@@ -32,22 +32,11 @@
     </div>
   </nav>
 
-
-
-<h1>Manage Your Bookings</h1>
-{% for booking in bookings %}
-<div>
-<p>{{ booking.id }}</p>
-<p>{{ booking.date }}</p>
-<p>{{ booking.time }}</p>
-
-<a href="{% url 'delete_booking' booking.id %}">Cancel</a>
-<a href="{% url 'edit_booking' booking.id %}">Edit</a>
-
-{% endfor %}
-</div>
-
-
-
-
+<p>You successfully changed your booking. Here are you new booking details:</p>
+  
+{{ booking }}
+  
 {% endblock %}
+
+
+<h1>Booking changed</h1>
