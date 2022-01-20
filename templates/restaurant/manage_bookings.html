@@ -41,8 +41,8 @@
 <p>{{ booking.date }}</p>
 <p>{{ booking.time }}</p>
 
-<a href="{% url 'delete_booking' booking.id %}">Cancel</a>
-<a href="{% url 'edit_booking' booking.id %}">Edit</a>
+<a href="{% url 'delete_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Cancel<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706107/trash_ry4rll.svg"></a>
+<a href="{% url 'edit_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Edit<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706102/pencil_pqj59a.svg"></a>
 
 {% endfor %}
 </div>
