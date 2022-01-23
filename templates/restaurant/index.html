@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
   <div class="container-fluid">
-    <a class="navbar-brand text-warning bg-dark" href="/"><img src="https://res.cloudinary.com/p-modaley/image/upload/v1642713298/Simple_Black_and_White_Burger_Restaurant_Creative_Logo_Illustration_250_x_100_px_1_c8ium3.png"></a>
+    <a class="navbar-brand text-warning bg-dark" href="/"><img src="https://res.cloudinary.com/p-modaley/image/upload/v1642949347/Simple_Black_and_White_Burger_Restaurant_Creative_Logo_Illustration_250_x_100_px_4_ksyjp9.png"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +32,7 @@
 <div
   class="container-fluid bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
   style="background-image: url('https://res.cloudinary.com/p-modaley/image/upload/v1642767154/GettyImages-1174648824_ielqel.jpg');  background-position: center; height: 90vh">
-  <h1 class="mb-3 h2 display-1">Liverpool's Best Restaurant</h1>
+  <h1 class="mb-3 h2 display-1">Flame-Grilled Perfection</h1>
   <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="margin-top: 50vh;">
     <button type="button" class="btn btn-warning btn-lg px-4 gap-3 text-dark" style="margin-right: 20px;"><a href="/create_booking/" style="text-decoration: none; color: black;">Book A Table</a></button>
     <button type="button" class="btn btn-warning btn-lg px-4 gap-3 text-dark"><a href="/menu/" style="text-decoration: none; color: black;">View Menu</a></button>
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<div class="container bg-dark">
+<div class="container bg-dark" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642950015/GettyImages-639779522_kpvmwb.jpg); margin-bottom: 10px;">
   <div class="row">
     <div class="col" style="margin: 10px;">
       <h2 class="text-warning">
@@ -69,9 +69,9 @@
       <p class="text-white">Tuesday: 11:00 - 22:00</p>
       <p class="text-white">Wednesday: 11:00 - 22:00</p>
       <p class="text-white">Thursday: 11:00 - 22:00</p>
-      <p class="text-white">Friday: 11:00 - 22:00</p>
+      <p class="text-white">Friday: 11:00 - 23:00</p>
       <p class="text-white">Saturday: 11:00 - 23:00</p>
-      <p class="text-white">Sunday: 11:00 - 23:00</p>
+      <p class="text-white">Sunday: 11:00 - 22:00</p>
     </div>
     <div class="col" style="margin: 10px;">
       <h2 class="text-warning" style="text-align: center;">
@@ -137,18 +137,17 @@
             </form>
 
             <div class="text-center text-md-left">
-                <a class="btn btn-primary bg-warning text-dark btn-outline-dark" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <a class="btn btn-primary bg-warning text-dark btn-outline-dark">Send</a>
             </div>
             <div class="status"></div>
         </div>
         <!--Grid column-->
-    
+        <form>
+          {{ form.as_p }}
+          <input type="submit" value='Save'/>
+      </form>
 
     </div>
-    <form>
-        {{ form.as_p }}
-        <input type="submit" value='Save'/>
-    </form>
 </section>
 <!--Section: Contact v.2-->
     </div>
