@@ -33,6 +33,7 @@ urlpatterns = [
     path('about/', restaurant_views.about, name="about"),
     path('contact_create/', restaurant_views.contact_create_view, name="contact_create"),
     path('manage_bookings/', restaurant_views.manage_bookings, name="manage_bookings"),
+    path('confirm_delete_booking/<int:booking_id>', restaurant_views.confirm_delete_booking, name="confirm_delete_booking"),
     path('delete_booking/<int:booking_id>', restaurant_views.delete_booking, name="delete_booking"),
     path('edit_booking/<int:booking_id>', restaurant_views.edit_booking, name="edit_booking"),
     path('booking_changed/', restaurant_views.booking_changed, name="booking_changed"),

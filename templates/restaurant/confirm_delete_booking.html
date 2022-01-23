@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse; d-flex justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-tabs">
           <li class="nav-item">
-            <a class="nav-link text-warning bg-dark" href="/">Home</a>
+            <a class="nav-link active text-warning bg-dark" aria-current="page" href="/">Home</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" a href="/menu/">Menu</a>
@@ -18,8 +18,8 @@
           <li class="nav-item">
             <a class="nav-link text-warning bg-dark" href="/create_booking/">Make a booking</a>
           </li>
-          <li class="nav-item text-warning bg-dark">
-            <a class="nav-link text-warning bg-dark active" href="/manage_bookings/">Manage bookings</a>
+          <li class="nav-item">
+            <a class="nav-link text-warning bg-dark" href="/manage_bookings/">Manage bookings</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="contact_create.html">Contact</a>
@@ -33,21 +33,15 @@
   </nav>
 
 
-
-<h1>Manage Your Bookings</h1>
-{% for booking in bookings %}
-<div>
-<p>{{ booking.id }}</p>
-<p>{{ booking.date }}</p>
-<p>{{ booking.time }}</p>
-
-<a href="{% url 'confirm_delete_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Cancel<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706107/trash_ry4rll.svg"></a>
-<a href="{% url 'edit_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Edit<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706102/pencil_pqj59a.svg"></a>
-
-{% endfor %}
-</div>
-
-
-
+<h1>Confirm booking deletion?</h1>
+<form method="POST" action="/delete_booking/{{booking_id}}"> {% csrf_token %}
+    <div>
+        <button type="submit">Confirm</button>
+    </div>
+    <div>
+        <!-- Add link to go to manage booking page -->
+        <a><button value='Cancel'/></a>
+    </div>
+</form>
 
 {% endblock %}

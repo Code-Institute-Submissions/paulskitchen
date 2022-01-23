@@ -91,11 +91,20 @@ def manage_bookings(request):
     }
     return render(request, 'restaurant/manage_bookings.html', context)
 
+#confirm delete booking function
+def confirm_delete_booking(request, booking_id):
+    context={
+        "booking_id": booking_id
+
+    }
+    return render(request, 'restaurant/confirm_delete_booking.html', context)
+
 #delete booking function
 def delete_booking(request, booking_id):
     bookings = Booking.objects.get(pk=booking_id)
     bookings.delete()
-    return render(request, 'restaurant/manage_bookings.html')
+    return render(request, 'restaurant/manage_bookings.html', {})
+
 
 #update booking function
 def edit_booking(request, booking_id):
