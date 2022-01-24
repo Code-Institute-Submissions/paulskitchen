@@ -11,6 +11,12 @@ class TimeInput(forms.TimeInput):
 class NumberInput(forms.NumberInput):
     input_type = 'number'
 
+class TextInput(forms.TextInput):
+    input_type = 'text'
+    
+class EmailInput(forms.EmailInput):
+    input_type = 'email'
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -19,6 +25,11 @@ class ContactForm(forms.ModelForm):
             'email',
             'message',
         ]
+        widgets = {
+            'name': TextInput(attrs={'class': 'form-control'}),
+            'email': EmailInput(attrs={'class': 'form-control'}),
+            'message': TextInput(attrs={'class': 'form-control'}),
+        }
 
 class BookingForm(forms.ModelForm):
     class Meta:
