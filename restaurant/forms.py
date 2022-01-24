@@ -8,6 +8,9 @@ class DateInput(forms.DateInput):
 class TimeInput(forms.TimeInput):
     input_type = 'time' 
 
+class NumberInput(forms.NumberInput):
+    input_type = 'number'
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -26,9 +29,10 @@ class BookingForm(forms.ModelForm):
             'time',
             'guests',
         ]
-        widgets = {
-            'date': DateInput(),
-            'time': TimeInput()
+        widgets = { 
+            'date': DateInput(attrs={'class': 'form-control'}),
+            'time': TimeInput(attrs={'class': 'form-control'}),
+            'guests': NumberInput(attrs={'class': 'form-control'}),
         }
 
 #home page contact form

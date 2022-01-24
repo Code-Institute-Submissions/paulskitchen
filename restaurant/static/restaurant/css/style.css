@@ -3,8 +3,22 @@
 
 body {
     font-family: 'Cinzel', serif;
+    height: 100%;
 }
 
 .bi {
     margin-right: 10px;
 }
+
+#footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
+
+/*form styling*/
+.form-control {
+    width: 25%;
+}
+
