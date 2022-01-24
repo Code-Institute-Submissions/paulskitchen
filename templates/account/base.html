@@ -14,6 +14,29 @@
     {% endblock %}
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand text-warning bg-dark" href="/"><img src="https://res.cloudinary.com/p-modaley/image/upload/v1642949347/Simple_Black_and_White_Burger_Restaurant_Creative_Logo_Illustration_250_x_100_px_4_ksyjp9.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse; d-flex justify-content-end;" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right list-inline list-group nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active text-warning bg-dark" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning bg-dark" a href="/menu/">Menu</a>
+            </li>
+            <!--<li class="nav-item">
+              <a class="nav-link" href="/contact_create/">Contact</a>
+            </li>-->
+            <li class="nav-item">
+              <a class="nav-link text-warning bg-dark" href="/accounts/login/">Login</a>
+            </li>
+        </div>
+      </div>
+    </nav>
     {% block body %}
 
     {% if messages %}

@@ -32,23 +32,25 @@
     </div>
   </nav>
 
-<div><h1>Create Bookings</h1></div>
+<div class="container d-flex justify-content-center"><h1>Create Bookings</h1></div>
 <div class="form-group">
 <form method="POST"> {% csrf_token %}
-    <input name="user" value="{{ user.id }}">
-    <div>
+  <div class="container d-flex justify-content-center">
+    <input name="user" class="form-control" value="{{ user.id }}">
+  </div>
+    <div class="container d-flex justify-content-center">
     <label>Date:</label>
     {{ form.date }}
     </div>
-    <div>
+    <div class="container d-flex justify-content-center">
     <label>Time:</label>
     {{ form.time }}
     </div>
-    <div>
+    <div class="container d-flex justify-content-center">
     <label>Number of guests:</label>
     {{ form.guests }}
     </div>
-    <div>
+    <div class="container d-flex justify-content-center">
     <input type="submit" value='Save'/>
     </div>
 </form>

@@ -1,9 +1,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lobster&family=Smokum&display=swap');
-
+/*general*/
 body {
     font-family: 'Cinzel', serif;
+    font-size: x-large;
     height: 100%;
+    background: #f0ad4e;
 }
 
 .bi {
@@ -17,9 +19,14 @@ body {
     margin-top: -200px;
 }
 
+.heading {
+    text-align: center;
+}
+
 /*form styling*/
 .form-control {
     width: 25%;
+    margin: 25px;
 }
 
 .manage_booking {
@@ -29,3 +36,12 @@ body {
 .link-dark {
     font-size: xx-large;
 }
+
+.edit {
+    font-size: 350px;
+}
+.login {
+    width: 25%;
+    margin: 25px;
+}
+
