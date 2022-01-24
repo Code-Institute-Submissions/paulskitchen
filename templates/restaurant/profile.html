@@ -34,5 +34,9 @@
 
 
 <h1>Profile</h1>
-
+{% for user in UserProfiles %}
+<div>
+<p>{{ user.username }}</p>
+<p>{{ user.firstname }}</p>
+{% endfor %}
 {% endblock %}

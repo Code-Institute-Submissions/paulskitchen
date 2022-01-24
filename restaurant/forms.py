@@ -30,3 +30,13 @@ class BookingForm(forms.ModelForm):
             'date': DateInput(),
             'time': TimeInput()
         }
+
+#home page contact form
+class HomeContact(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = [
+            'name', 
+            'email',
+            'message',
+        ]

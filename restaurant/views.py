@@ -95,7 +95,6 @@ def manage_bookings(request):
 def confirm_delete_booking(request, booking_id):
     context={
         "booking_id": booking_id
-
     }
     return render(request, 'restaurant/confirm_delete_booking.html', context)
 

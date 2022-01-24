@@ -50,11 +50,11 @@
 
 <div class="container">
   <div class="row" style="height: 50vh;">
-    <div class="col-sm" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/img3_janqb5.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
+    <div class="col-sm" id="food1" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/img3_janqb5.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
     </div>
-    <div class="col-sm" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/g4_k1ju7p.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
+    <div class="col-sm" id="food2" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/g4_k1ju7p.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
     </div>
-    <div class="col-sm" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/g1_fs5mtv.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
+    <div class="col-sm" id="food3" style="background-image: url(https://res.cloudinary.com/p-modaley/image/upload/v1642940239/g1_fs5mtv.jpg); background-repeat: no-repeat; margin: 10px; border-radius: 15px 50px;">
     </div>
   </div>
 </div>
@@ -77,76 +77,17 @@
       <h2 class="text-warning" style="text-align: center;">
         Contact Us
       </h2>
-      <p class="text-center w-responsive mx-auto mb-5 text-white">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p>
-
-        <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5 text-white">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="text-white">Your name</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="text-white">Your email</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="text-white">Subject</label>
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary bg-warning text-dark btn-outline-dark">Send</a>
-            </div>
-            <div class="status"></div>
+      <div style="text-align: center">
+      <p class="text-center w-responsive mx-auto mb-5 text-white">Please contact us via the details below.</p>
+      <p class="text-warning">Telephone:</p>
+      <p class="text-white">0151 123 4567</p>
+      <br>
+      <p class="text-warning">Address:</p>
+      <p class="text-white">1 Bold Street, Liverpool</p>
+      <br>
+      <button class="bg-warning"><a href="/contact_create/" style="text-decoration: none; color: black;">Send Us A Message</a></button>
         </div>
-        <!--Grid column-->
-        <form>
-          {{ form.as_p }}
-          <input type="submit" value='Save'/>
-      </form>
-
+    
     </div>
 </section>
 <!--Section: Contact v.2-->
