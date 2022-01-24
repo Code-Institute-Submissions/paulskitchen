@@ -37,11 +37,11 @@
 <h1>Manage Your Bookings</h1>
 {% for booking in bookings %}
 <div>
-<p>{{ booking.id }}</p>
-<p>{{ booking.date }}</p>
-<p>{{ booking.time }}</p>
+<p class="manage_booking">Booking ID: {{ booking.id }}</p>
+<p class="manage_booking"> Booking Date: <br>{{ booking.date }}</p>
+<p class="manage_booking">Booking Time: <br>{{ booking.time }}</p>
 
-<a href="{% url 'confirm_delete_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Cancel<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706107/trash_ry4rll.svg"></a>
+<div><a href="{% url 'confirm_delete_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Cancel<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706107/trash_ry4rll.svg"></a></div>
 <a href="{% url 'edit_booking' booking.id %}" class="link-dark" style="text-decoration: none;">Edit<img src="https://res.cloudinary.com/p-modaley/image/upload/v1642706102/pencil_pqj59a.svg"></a>
 
 {% endfor %}

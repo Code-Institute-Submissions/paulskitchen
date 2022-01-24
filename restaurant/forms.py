@@ -46,12 +46,3 @@ class BookingForm(forms.ModelForm):
             'guests': NumberInput(attrs={'class': 'form-control'}),
         }
 
-#home page contact form
-class HomeContact(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = [
-            'name', 
-            'email',
-            'message',
-        ]
