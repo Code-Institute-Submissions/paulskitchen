@@ -1,2 +1,1 @@
-web: python 
-paulskitchen.wsgi
+web: python paulskitchen.wsgi
