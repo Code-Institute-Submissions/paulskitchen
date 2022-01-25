@@ -68,3 +68,12 @@ body {
   #popup {
     display:none;
   }
+
+
+.special-nav {
+
+}
+
+.special-nav:hover {
+    background-color: white;
+}

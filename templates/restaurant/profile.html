@@ -39,23 +39,40 @@
 </script>
 
 <h1>Profile</h1>
-{% for user in UserProfiles %}
+
 <div>
-<p>{{ user.username }}</p>
-<p>{{ user.firstname }}</p>
-{% endfor %}
+  <form method="post" action="/accounts/profile/">{% csrf_token %}
+    <div>
+      <label>First Name</label><br>
+      <input name="firstname" type="text" value="{{ firstname }}"/>
+    </div>
+    <div>
+      <label>Last Name</label><br>
+      <input name="lastname" type="text" value="{{ lastname }}"/>
+    </div>
+    <div>
+      <label>Email</label><br>
+      <input name="email" type="email" value="{{ user.email }}"/>
+    </div> 
+    <div class="container d-flex justify-content-center">
+      <input type="submit" value='Save'/>
+    </div>
+  </form>
+</div>
+
 
 <div class="container mt-auto fixed-bottom"></div>
           
-                
-<div class="container" style="text-align: center;">
-  <div class="row align-items-start">
-    <div class="col">
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-twitter"></i>
+<footer>
+  <div class="container" style="text-align: center;">
+    <div class="row align-items-start">
+      <div class="col">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-twitter"></i>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Paul's Kitchen 2022</p>
     </div>
-    
-    <p style="text-align: center; margin-top: 20px;">Paul's Kitchen 2022</p>
   </div>
+</footer>
 {% endblock %}

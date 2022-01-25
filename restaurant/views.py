@@ -20,13 +20,38 @@ def profile(request):
     """profile page entry point"""
     # We expect a GET request for the users email client
     if request.method == "GET":
-        profile = UserProfile.objects.all()
+        profile = UserProfile.objects.filter(user=request.user).first()
         print(profile)
-        return render(request, 'restaurant/profile.html', {})
+        if profile:
+            context = {
+                "firstname": profile.firstname,
+                "lastname": profile.lastname,
+            }
+        else:
+            context = {}
+        return render(request, 'restaurant/profile.html', context)
 
     if request.method == "POST":
         #Handle incoming form data
-        return render(request, 'restaurant/profile.html', {})
+        firstname = request.POST["firstname"]
+        lastname = request.POST["lastname"]
+        profile = UserProfile.objects.filter(user=request.user).first()
+        if profile:
+            profile.firstname = firstname
+            profile.lastname = lastname
+            profile.save()
+        else:
+            UserProfile(
+                user=request.user,
+                firstname=firstname,
+                lastname=lastname,
+                email=request.user.email
+            ).save()
+        context = {
+            "firstname": firstname,
+            "lastname": lastname,
+        }
+        return render(request, 'restaurant/profile.html', context)
 
 
       #For all other request types, return not accepted HTML code  
@@ -44,11 +69,13 @@ def menu(request):
 
 """Function to render create booking page"""
 def create_booking(request):
-    print(request.user.username)
-    print(request.POST)
+    """Create a booking method"""
+    # If user is not logged in thyen redirect to login page
+    if not request.user.username:
+         return redirect("/accounts/login/")
+    
     form = BookingForm(request.POST or None)
-        
-
+    
     if request.method == 'POST': 
         if form.is_valid():
             form.save()
