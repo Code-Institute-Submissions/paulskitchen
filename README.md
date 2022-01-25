@@ -1,111 +1,247 @@
-https://balsamiq.cloud/s6r6c6e/p60w8fh
+# Paul's Kitchen
+
+## Introduction
+
+Welcome to my project which is a website for a fictional restaurant called "Paul's Kitchen".
+
+A live version of the website can be found here: https://paulskitchen.herokuapp.com/
+
+## [Table of Contents](#1-ux)
+
+- 1. [UX](##1.UX)
+
+  - ​	1.1. Strategy
+    - Project Goals
+      - User Stories
+  - 1.2 Structure
+  - 1.3 Skeleton
+  - 1.4 Surface
+
+- 2. [Features](##2. Features)
+
+- 3. Technologies Used
+
+- 4. Testing
+
+- 5. Development Cycle
+
+- 6. Deployment
+
+- 7. End Product
+
+- 8. Known Bugs
+
+- 9. Credits
 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome PaulModaley,
+## 1.UX
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Back to top](#table-of-contents)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This website aims to enable people seeking information about Paul's Kitchen to view the menu, contact the restaurant, register with the restaurant, and make, edit and delete bookings. 
 
-## Gitpod Reminders
+### 1.1 Strategy
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Back to top](#table-of-contents)
 
-`python3 -m http.server`
+#### Project Goals
 
-A blue button should appear to click: _Make Public_,
+The goals of the website are to:
 
-Another blue button should appear to click: _Open Browser_.
+1) Enable customer to make, edit and delete bookings
+2) Register their details with the restaurant by creating a profile and login credentials.
+3) Enable an admin to manage bookings and customer details in the system
+4) Showcase the restaurant's style and its menu
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### User Stories:
 
-A blue button should appear to click: _Make Public_,
+- As a **customer**, I can **make table booking** so that **I can reserve a table for a particular number of diners for a specified date and time.**
+- As a **customer**, I can **register my details with the restaurant** so that **I can login and use my profile to make bookings.**
+- As a **customer**, I can **manage bookings** so that **I can add or remove diners or change the date/time of my booking.**
+- As a **customer**, I can **contact the restaurant** so that **I can provide the venue with additional information or make a query.*
+- As an **administrator**, I can **manage customers' bookings** so that **I can add/remove diners and change the date/time of booking**
+- As an **administrator**, I can **edit customer accounts** so that **I can update and/or delete customer details.**
+- As a **customer**, I can **read an about the venue** so that **I can learn more about the restaurant's style and menu.**
+- As a **customer**, I can **view the restaurant's menu** so that **I can consider what to order ahead of visiting the venue.**
+- As a **customer*, I can **connect with the restaurant on social media** so that **I can suggest the venue to social media contacts and ask questions.**
 
-Another blue button should appear to click: _Open Browser_.
+#### Structure
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The site will feature distinct pages, including home, menu, login, make a booking, and edit bookings. Users may navigate between the sections via the main navigation situated at the top of the page. 
 
-To log into the Heroku toolbelt CLI:
+- Responsive on all devices sizes.
+- Navigation bar changes to a 'hamburger' style menu (top centre of screen) on smaller screens
+- Footer at the bottom of the page links to social media pages.
+- All elements will be comply with Paul's Kitchen's (fictional) branding, including colours, font size and typography.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Skeleton
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+I generated designs for the website using wireframes in Balsamiq. 
 
-------
+**Wire Frames**
 
-## Release History
+https://share.balsamiq.com/c/4NTKVmHWXeuBzJobAdpYLR.png
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+https://res.cloudinary.com/p-modaley/image/upload/v1643128938/Paul_s_Kitchen_wireframe_jmf2up.png
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Surface
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The colour schemes and typography used are consistent with my vision for the brand, Paul's Kitchen.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## 2. Features
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[Back to top](#table-of-contents)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**Single page design:**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Navigation bar will be placed at the top of the screen to enable easy access for the user. It collapses to a hamburger-style menu on smaller screens. As a sticky navigation bar, it will remain at the top of the screen as the user scrolls.
+- The company logo will also feature at the top of the page.
+- In the footer, users may access links to social media pages.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Sections:**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The site design is comprised of several pages. Which of the sections are accessible via the navigation bar depends on whether or not the user is logged in. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<u>Home</u>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+This first section includes introductory text position to the right of a hero image situated in an angled div to add visual appeal to the page. This section is separated from the remained of the page by a div featuring the text, 'RXM Enables Brands To...' 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<u>Menu</u>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+In the 'Get Found' section, users will be able to read about the importance of improving visibility online and how to make themselves more attractive to potential customers. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+There will be a video in this section that users can watch entitled, 'Introduction to Customer Reviews and Star Ratings'.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+A 'back to the top' link will enable the user to return to the top navigation menu.
 
-------
+<u>Login</u>
 
-## FAQ about the uptime script
+Distinguished from the previous section by its light grey background colour, 'Get Chosen' explains to users how customers choose businesses online.
 
-**Why have you added this script?**
+A bar graph illustrates influences on the customer purchase decision. Such data provided in a visual way is appealing to Reputation customers.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<u>Make A Booking</u>
 
-**How will this affect me?**
+A darker grey background distinguishes this section from 'Get Chosen'. Here, the user can read about how customer feedback can enable businesses to enhance the customer experience. 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Also, the '3Cs for the Optimal Customer Experience' will feature toward the bottom of this section in 3 darker coloured boxes which enhance the visual appeal of the page.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<u>Manage Booking</u>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+In this section, users may view a video explaining the capabilities of the the Reputation platform. At the bottom of the section, there is a form which users may complete to signal their interest in receiving a demo of the platform.
 
-**So….?**
+### 3. Technologies Used
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+[Back to top](#table-of-contents)
 
-**Can I opt out?**
+The following is a non-exhaustive list of the technologies employed in the creation of the website:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- HTML5 
+- Python
+- Bootstrap
+- CSS3
+- JavaScript
+- Chrome Developer Tools (for debugging and testing)
+- [Balsamiq](https://balsamiq.com/wireframes/?gclid=CjwKCAjwt8uGBhBAEiwAayu_9Re_SESOK5WbZcH6AhP1IRIE_hxODw8EmSBYSkPiRQ41fvAERHT38hoCClQQAvD_BwE) (for developing wireframes during the initial design process)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [GitHub](https://github.com/) (project repository)
+- [GitPod](https://gitpod.io) (code line interface)
+- [Typora](https://typora.io/) (for creating this readme file)
+- [W3C Validator tools](https://validator.w3.org/) (for validating code and error checking)
+- Heroku for app deployment
+- Django for building the backend, including allauth for user authentication
+- Postgresql for the database
+- Cloudinary for media storage
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### 4. Testing
 
-**Anything more?**
+[Back to top](#table-of-contents)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+**Google Developer Tools**
 
----
+During the process of coding the website, I used Google Developer Tools to view the affects of changes to the code. Occasionally, I would alter code within Google Developer Tools to observe changes before deciding whether or not to incorporate these changes within the code in GitPod. 
 
-Happy coding!
+**Responsivity and Mobile-first Approach**
+
+To ensure mobile responsivity, I made extensive use of Google Developer Tool's 'responsive' options, viewing my site on a range of devices, including iPhone 5/6/7/X. Bootstrap also contributed significantly to the website's mobile responsivity.
+
+**Validator Tools**
+
+Error identification and HTML validation was conducted using [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) while [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) enabled me to identify errors within my project's CSS.
+
+#### **Testing Process**
+
+The site was tested thoroughly for mobile and web responsivity and full CRUD functionality. Mainly, manual testing was employed. 
+
+## 5. Development Cycle
+
+[Back to top](#table-of-contents)
+
+Having established a clear vision for the project as illustrated through wireframes, the development cycle was fairly linear without a great deal of deviation from the original plan. 
+
+However, there were a few changes made during the development cycle which were not accounted for during the planning process.  The changes were made following discussions with other developers who offered constructive criticism of the site during its development. 
+
+#### Form
+
+- A form was added to replace the 'Get a Demo Button'
+- The form presents one major advantage over the 'Get a Demo' button - it reduces the number of clicks needed before the user can access the form and avoids the need for opening new tabs.
+
+#### Navigation
+
+- Following discussion with my mentor, I implemented a sticky navigation to enhance the user experience.
+
+#### Shadows
+
+- To enhance the visual appearance, I added a box shadow effect at the bar graphs and boxes including the form.
+
+## 6. Deployment
+
+I deployed my project through GitHub. The process was as follows:
+
+- From my repository, select 'Settings'.
+- Select pages.
+- Select 'Branch: master' under the 'Source' heading
+- Select publish
+
+## 7. End Product
+
+[Back to top](#table-of-contents)
+
+![image-20220125165633145](C:\Users\Paul Modaley\AppData\Roaming\Typora\typora-user-images\image-20220125165633145.png)
+
+The site may be viewed via this link: https://paulskitchen.herokuapp.com/
+
+## 8. Known Bugs
+
+[Back to top](#table-of-contents)
+
+- On desktop view in particular, the YouTube videos appear somewhat larger than would be ideal.
+- Form inputs were not aligned. This has been remedied by adding a width of 100px to the CSS input 'label'.
+
+## 9. Credits
+
+[Back to top](#table-of-contents)
+
+#### Code
+
+- The angled div came from [Suman Biswas at Codepen](https://codepen.io/biswassuman/pen/NWGqKwd)
+- The transparent text box over the hero image in mobile view came from [Rob Doyle Creative](https://robdoylecreative.com/how-to-add-a-transparent-text-box-over-an-image-using-css/)
+- The bar graph in the 'Get Chosen' section came from [W3 Schools](https://www.w3schools.com/howto/howto_css_skill_bar.asp)
+- The responsive navigation bar came from [W3 Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
+- The responsive iframes came from [W3 Schools](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp)
+- Fonts came from [Google Fonts](https://fonts.google.com/)
+- Icons in the footer came from [https://fontawesome.com/](https://fontawesome.com/)
+- Code for hover effect on demo button came from [W3 Schools](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
+
+#### Content
+
+- Text content and statistics came from Reputation's ['RXM Guide: What is Reputation Experience Management?'](https://go.reputation.com/hubfs/Downloadable%20Assets/2020%20RXM%20Guide%20EN.pdf)
+- Images came from [Getty Images](gettyimages.co.uk)
+- Videos came from [Reputation's YouTube channel](https://www.youtube.com/channel/UCzgjQHzKoKoCHAXhRB45pfg)
+- Logo image came from Reputation
+- Branding and colour scheme came from Reputation
+
+
+
