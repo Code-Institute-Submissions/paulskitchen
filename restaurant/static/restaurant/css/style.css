@@ -12,11 +12,13 @@ body {
     margin-right: 10px;
 }
 
-#footer {
+footer {
     clear: both;
     position: relative;
-    height: 200px;
-    margin-top: -200px;
+    text-align: center;
+    bottom: 0;
+   
+
 }
 
 .heading {
@@ -80,4 +82,14 @@ body {
 
 .about {
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+
+.nav-item {
+    display: none;
+}
+.navbar-toggler {
+    align-items: right;
+}
 }
