@@ -1,36 +1,40 @@
 {% extends "restaurant/base.html" %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Paul's Kitchen</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse; d-flex justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" a href="/menu/">Menu</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/create_booking/">Make a booking</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/manage_bookings/">Manage bookings</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="contact_create.html">Contact</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="/accounts/logout/">Logout</a>
-          </li>
-          
-      </div>
-    </div>
-  </nav>
+
+<!-- Nav menu script and markup -->
+ <!-- Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */ -->
+ <script>
+  function myFunction() {
+   var x = document.getElementById("myLinks");
+   if (x.style.display === "block") {
+     x.style.display = "none";
+   } else {
+     x.style.display = "block";
+   }
+ }
+ </script>
+ 
+ <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <!-- Top Navigation Menu -->
+ <div class="topnav">
+   <a href="/" class="active"><img src="https://res.cloudinary.com/p-modaley/image/upload/v1642949347/Simple_Black_and_White_Burger_Restaurant_Creative_Logo_Illustration_250_x_100_px_4_ksyjp9.png" alt="home-nav-image"></a></a>
+   <!-- Navigation links (hidden by default) -->
+   <div class="bg-dark" id="myLinks">
+     <a href="/">Home</a>
+     <a href="/menu/">Menu</a>
+     <a href="/create_booking/">Make a booking</a>
+     <a href="/manage_bookings/">Manage bookings</a>
+     <a href="/accounts/logout/">Logout</a>
+   </div>
+   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+     <i class="fa fa-bars"></i>
+   </a>
+ </div>
+
 
 <p>You successfully changed your booking.</p>
   
