@@ -111,9 +111,9 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
+    padding-top: 60px;
   }
-  
-/* Style the hamburger menu */
+
 .topnav a.icon:hover {
     background: #f0ad4e;
     display: block;
@@ -127,8 +127,3 @@ footer {
     background-color: #262626;
     color: #f0ad4e;
   }
-@media only screen and (max-width: 450px) { */
-
-.navbar-nav {
-    justify-content: center;
-}
