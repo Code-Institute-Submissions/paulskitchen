@@ -4,6 +4,8 @@
 
 Welcome to my project which is a website for a fictional restaurant called "Paul's Kitchen".
 
+![](https://res.cloudinary.com/p-modaley/image/upload/v1643129983/paul_s_kitchen_end_product_dezz07.jpg)
+
 A live version of the website can be found here: https://paulskitchen.herokuapp.com/
 
 ## [Table of Contents](#1-ux)
@@ -97,37 +99,29 @@ The colour schemes and typography used are consistent with my vision for the bra
 - The company logo will also feature at the top of the page.
 - In the footer, users may access links to social media pages.
 
-**Sections:**
+**Pages:**
 
 The site design is comprised of several pages. Which of the sections are accessible via the navigation bar depends on whether or not the user is logged in. 
 
 <u>Home</u>
 
-This first section includes introductory text position to the right of a hero image situated in an angled div to add visual appeal to the page. This section is separated from the remained of the page by a div featuring the text, 'RXM Enables Brands To...' 
+The home page features images of the types of food served by the restaurant. 
 
 <u>Menu</u>
 
-In the 'Get Found' section, users will be able to read about the importance of improving visibility online and how to make themselves more attractive to potential customers. 
-
-There will be a video in this section that users can watch entitled, 'Introduction to Customer Reviews and Star Ratings'.
-
-A 'back to the top' link will enable the user to return to the top navigation menu.
+A hamburger style menu is employed to facilitate browsing on various screen sizes. The hamburger icon expands or collapses when it is clicked.
 
 <u>Login</u>
 
-Distinguished from the previous section by its light grey background colour, 'Get Chosen' explains to users how customers choose businesses online.
-
-A bar graph illustrates influences on the customer purchase decision. Such data provided in a visual way is appealing to Reputation customers.
+Here, users will be prompted to enter login in details or to register. If users are already logged in, a 'success' message will appear and the users' account information will be displayed on a profile page.
 
 <u>Make A Booking</u>
 
-A darker grey background distinguishes this section from 'Get Chosen'. Here, the user can read about how customer feedback can enable businesses to enhance the customer experience. 
-
-Also, the '3Cs for the Optimal Customer Experience' will feature toward the bottom of this section in 3 darker coloured boxes which enhance the visual appeal of the page.
+Users can make bookings provided they are logged in to the site. To make a booking, users must supply their preferred date and time as well as the number of guests attending.
 
 <u>Manage Booking</u>
 
-In this section, users may view a video explaining the capabilities of the the Reputation platform. At the bottom of the section, there is a form which users may complete to signal their interest in receiving a demo of the platform.
+Users wishing to amend or cancel their booking(s) can do so via the 'manage bookings' page by typing or clicking in the form fields and selecting the 'cancel' or 'edit' icon as desired.
 
 ### 3. Technologies Used
 
@@ -152,6 +146,7 @@ The following is a non-exhaustive list of the technologies employed in the creat
 - Django for building the backend, including allauth for user authentication
 - Postgresql for the database
 - Cloudinary for media storage
+- [Sweet Alert](https://sweetalert.js.org/) was used to display flash messages to the user to indicate successful actions.
 
 ### 4. Testing
 
@@ -183,27 +178,24 @@ However, there were a few changes made during the development cycle which were n
 
 Throughout the project I used the GitHub projects as my project management tool which enabled me to create user stories and build website functionality according to these. Completed tasks (user stories) would be moved to 'done' once completed to a satisfactory standard.
 
-#### Form
-
-- A form was added to replace the 'Get a Demo Button'
-- The form presents one major advantage over the 'Get a Demo' button - it reduces the number of clicks needed before the user can access the form and avoids the need for opening new tabs.
-
-#### Navigation
-
-- Following discussion with my mentor, I implemented a sticky navigation to enhance the user experience.
-
-#### Shadows
-
-- To enhance the visual appearance, I added a box shadow effect at the bar graphs and boxes including the form.
-
 ## 6. Deployment
 
-I deployed my project through GitHub. The process was as follows:
+- Process for local deployment:
 
-- From my repository, select 'Settings'.
-- Select pages.
-- Select 'Branch: master' under the 'Source' heading
-- Select publish
+  1. Create a GitHub repository.
+  2. Clone the repository on GitPod.
+  3. Open the terminal within GitPod.
+  4. Enter "python3 manage.py runserver into the terminal.
+  5. Go to local host address in web browser.
+  6. Check that changes are reflected in browser.
+
+  Process for the final Heroku deployment:
+
+  1. Uncomment the PostgreSQL databse from my settings.py file.
+  2. Set debug = False in my settings.py file.
+  3. Commit and push all files to GitHub
+  4. In Heroku, remove the DISABLE_COLLECTSTATIC config var.
+  5. In the deploy tab, go to the manual deploy sections and click deploy branch.
 
 ## 7. End Product
 
@@ -217,8 +209,7 @@ The site may be viewed via this link: https://paulskitchen.herokuapp.com/
 
 [Back to top](#table-of-contents)
 
-- On desktop view in particular, the YouTube videos appear somewhat larger than would be ideal.
-- Form inputs were not aligned. This has been remedied by adding a width of 100px to the CSS input 'label'.
+- Minor styling issues, including image sizes and button alignment, on certain screen sizes. 
 
 ## 9. Credits
 
@@ -226,19 +217,11 @@ The site may be viewed via this link: https://paulskitchen.herokuapp.com/
 
 #### Code
 
-- The angled div came from [Suman Biswas at Codepen](https://codepen.io/biswassuman/pen/NWGqKwd)
-- The transparent text box over the hero image in mobile view came from [Rob Doyle Creative](https://robdoylecreative.com/how-to-add-a-transparent-text-box-over-an-image-using-css/)
-- The bar graph in the 'Get Chosen' section came from [W3 Schools](https://www.w3schools.com/howto/howto_css_skill_bar.asp)
 - The responsive navigation bar came from [W3 Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp)
-- The responsive iframes came from [W3 Schools](https://www.w3schools.com/howto/howto_css_responsive_iframes.asp)
 - Fonts came from [Google Fonts](https://fonts.google.com/)
 - Icons in the footer came from [https://fontawesome.com/](https://fontawesome.com/)
 - Code for hover effect on demo button came from [W3 Schools](https://www.w3schools.com/howto/howto_css_zoom_hover.asp)
 
 #### Content
 
-- Text content and statistics came from Reputation's ['RXM Guide: What is Reputation Experience Management?'](https://go.reputation.com/hubfs/Downloadable%20Assets/2020%20RXM%20Guide%20EN.pdf)
-- Images came from [Getty Images](gettyimages.co.uk)
-- Videos came from [Reputation's YouTube channel](https://www.youtube.com/channel/UCzgjQHzKoKoCHAXhRB45pfg)
-- Logo image came from Reputation
-- Branding and colour scheme came from Reputation
+- Images came from [Getty Images](gettyimages.co.uk) and W3Layouts
