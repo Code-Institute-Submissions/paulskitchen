@@ -4,6 +4,7 @@ from .forms import  ContactForm, BookingForm
 
 
 
+
 # Create your views here.
 def index(request):
     """landing page entry point"""
