@@ -37,4 +37,5 @@ urlpatterns = [
     path('delete_booking/<int:booking_id>', restaurant_views.delete_booking, name="delete_booking"),
     path('edit_booking/<int:booking_id>', restaurant_views.edit_booking, name="edit_booking"),
     path('booking_changed/', restaurant_views.booking_changed, name="booking_changed"),
+    path('success/', restaurant_views.success, name="success"),
 ]

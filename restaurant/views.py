@@ -129,7 +129,7 @@ def confirm_delete_booking(request, booking_id):
 def delete_booking(request, booking_id):
     bookings = Booking.objects.get(pk=booking_id)
     bookings.delete()
-    return render(request, 'restaurant/manage_bookings.html', {})
+    return render(request, 'restaurant/success.html', {})
 
 
 #update booking function
@@ -147,3 +147,7 @@ def edit_booking(request, booking_id):
 #change of booking confirmation details
 def booking_changed(request):
     return render(request, 'restaurant/bookings_changed.html', {})
+
+"""Function to render contact hmtl page"""
+def success(request):
+        return render(request, 'restaurant/success.html', {})
