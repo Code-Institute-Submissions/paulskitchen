@@ -63,6 +63,10 @@ def profile(request):
 def contact(request):
         return render(request, 'restaurant/contact.html', {})
 
+def contact_create(request):
+        return render(request, 'restaurant/contact_create.html', {})
+
+
 """Function to render menu hmtl page"""
 def menu(request):
     return render(request, 'restaurant/menu.html', {})
@@ -106,7 +110,7 @@ def contact_create_view(request):
     context = {
         'form' : form
     }
-    return render(request, "/workspace/paulskitchen/templates/restaurant/contact_create.html", context)
+    return render(request, "/contact_create/", context)
 
 #function for manage booking
 def manage_bookings(request):
@@ -138,7 +142,7 @@ def edit_booking(request, booking_id):
 	form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
 	if form.is_valid():
 		form.save()
-		return render(request, 'restaurant/booking_changed.html/')
+		return render(request, 'restaurant/success.html/')
 
 	return render(request, 'restaurant/create_booking.html', 
 		{'booking':booking,
@@ -148,6 +152,6 @@ def edit_booking(request, booking_id):
 def booking_changed(request):
     return render(request, 'restaurant/bookings_changed.html', {})
 
-"""Function to render contact hmtl page"""
+"""Function to render success page to show success flash message"""
 def success(request):
         return render(request, 'restaurant/success.html', {})
