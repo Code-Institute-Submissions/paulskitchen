@@ -10,12 +10,12 @@ A live version of the website can be found here: https://paulskitchen.herokuapp.
 
 - 1. [UX](##1.UX)
 
-  - ​	1.1. Strategy
-    - Project Goals
-      - User Stories
-  - 1.2 Structure
-  - 1.3 Skeleton
-  - 1.4 Surface
+  -  1.1. Strategy
+     - Project Goals
+       - User Stories
+  -  1.2 Structure
+  -  1.3 Skeleton
+  -  1.4 Surface
 
 - 2. [Features](##2. Features)
 
@@ -81,9 +81,7 @@ I generated designs for the website using wireframes in Balsamiq.
 
 **Wire Frames**
 
-https://share.balsamiq.com/c/4NTKVmHWXeuBzJobAdpYLR.png
-
-https://res.cloudinary.com/p-modaley/image/upload/v1643128938/Paul_s_Kitchen_wireframe_jmf2up.png
+![](https://res.cloudinary.com/p-modaley/image/upload/v1643128938/Paul_s_Kitchen_wireframe_jmf2up.png)
 
 #### Surface
 
@@ -169,7 +167,7 @@ To ensure mobile responsivity, I made extensive use of Google Developer Tool's '
 
 **Validator Tools**
 
-Error identification and HTML validation was conducted using [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) while [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) enabled me to identify errors within my project's CSS.
+Error identification and HTML validation was conducted using [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) while [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) enabled me to identify errors within my project's CSS. Python testing was conducted using [Pep8 Online](http://pep8online.com/).
 
 #### **Testing Process**
 
@@ -182,6 +180,8 @@ The site was tested thoroughly for mobile and web responsivity and full CRUD fun
 Having established a clear vision for the project as illustrated through wireframes, the development cycle was fairly linear without a great deal of deviation from the original plan. 
 
 However, there were a few changes made during the development cycle which were not accounted for during the planning process.  The changes were made following discussions with other developers who offered constructive criticism of the site during its development. 
+
+Throughout the project I used the GitHub projects as my project management tool which enabled me to create user stories and build website functionality according to these. Completed tasks (user stories) would be moved to 'done' once completed to a satisfactory standard.
 
 #### Form
 
@@ -209,7 +209,7 @@ I deployed my project through GitHub. The process was as follows:
 
 [Back to top](#table-of-contents)
 
-![image-20220125165633145](C:\Users\Paul Modaley\AppData\Roaming\Typora\typora-user-images\image-20220125165633145.png)
+![](https://res.cloudinary.com/p-modaley/image/upload/v1643129983/paul_s_kitchen_end_product_dezz07.jpg)
 
 The site may be viewed via this link: https://paulskitchen.herokuapp.com/
 
@@ -242,6 +242,3 @@ The site may be viewed via this link: https://paulskitchen.herokuapp.com/
 - Videos came from [Reputation's YouTube channel](https://www.youtube.com/channel/UCzgjQHzKoKoCHAXhRB45pfg)
 - Logo image came from Reputation
 - Branding and colour scheme came from Reputation
-
-
-
